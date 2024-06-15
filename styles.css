@@ -1,0 +1,176 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  margin: 5px 0px 0px 10px;
+  background-color: #445;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 12px;
+}
+nav {
+  width: 100%;
+  padding: 15px 20px;
+  display: flex;
+  gap: 20px;
+  background: #00000050;
+  border-radius: 10px 0px 0px 10px;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 9px 10px;
+  position: relative;
+  text-align: center;
+}
+nav a::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: red;
+  bottom: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+nav a.active::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: green;
+  bottom: 0;
+  transform: scaleX(1);
+  transition: transform 0.3s ease;
+}
+nav a:hover::before {
+  transform: scaleX(1);
+}
+
+form {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+form label,
+form select {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 12px 10x;
+}
+
+form input,
+textarea,
+select {
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #004893;
+  color: #0ea5e0;
+  padding: 12px 10px;
+  border-radius: 0px 0px 15px 15px;
+  outline: none;
+}
+form input:focus,
+textarea:focus,
+select:focus {
+  outline: 1px solid #004893;
+  border-radius: 12px;
+}
+form {
+  background-color: transparent;
+}
+form button {
+  padding: 12px 10px;
+  background-color: transparent;
+  border-left: 3px solid #04305e;
+  border-right: 3px solid #004893;
+  border-bottom: 3px solid #004893;
+  border-top: 3px solid #04305e;
+  border-radius: 10px;
+  color: #0ea5e0;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.2s ease-in;
+}
+form button:hover {
+  opacity: 1;
+}
+select option {
+  background: #445;
+}
+::placeholder {
+  color: #0ea5e0;
+}
+
+.events-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.events-content .table {
+  width: 100%;
+  border: 1px solid #466;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+.events-content .table th {
+  padding: 10px 0;
+  color: #13b451;
+  padding-left: 10px;
+}
+.events-content .table td {
+  border: 1px solid #000;
+  padding: 8px 4px;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+.delete,
+.update,
+.detail {
+  border: none;
+  padding: 8px 10px;
+  margin: 1px;
+  border-radius: 12px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in;
+  flex-basis: 100px;
+}
+.delete {
+  background-color: #ff0000b6;
+}
+.update {
+  background-color: #87cfebce;
+}
+.detail {
+  background-color: #0b6b0bc2;
+}
+.delete:hover,
+.update:hover,
+.detail:hover {
+  opacity: 1;
+}
+.hidden {
+  display: none;
+}
